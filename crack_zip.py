@@ -21,10 +21,10 @@ def try_hard(file, min, max):
         status = try_to_extract(file, str(_pass))
         if status == True:
             found = True
-            stdscr.addstr(t_name, 0, f"Password: {_pass} -> Found correct password.")
+            stdscr.addstr(t_name, 0, f"[Thread {t_name}] Password: {_pass} -> Found correct password.")
             break # exit program
         else:
-            stdscr.addstr(t_name, 0, f"Password: {_pass} -> Faild password.")
+            stdscr.addstr(t_name, 0, f"[Thread {t_name}] Password: {_pass} -> Faild password.")
         
         stdscr.refresh()
     
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     curses.nocbreak()
     stdscr.keypad(False)
     curses.echo()
-    stdscr.addstr(10, 0, "Press any key to exit")
+    stdscr.addstr(10, 0, "Press [enter] key to exit")
     stdscr.getkey()
     curses.endwin()
 
