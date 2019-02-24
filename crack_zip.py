@@ -21,6 +21,7 @@ def try_hard(min, max):
         if status == True:
             print(f" -> Found password! -> [{_pass}]")
             sys.exit() # exit program
+        else:
             print(" -> Wrong password")
     
 
